@@ -29,20 +29,39 @@ static int printDataCallback(void *data, int argc, char **argv, char **azColName
 
 
     std::vector<std::string> results = splitStringBySpace(lineValue);
+
+
     if (!results.empty()) { // 条件检查以确保vector不为空
+
+
+    
     std::string lastElement = results.back();
-    // std::cout << "The last element is: " << lastElement << std::endl;
+
+    // std::string lastElement = "";
+    if (lastElement.find("\\") != std::string::npos) {
+
+        return 0;
+        
+    } else {
+        
+
+            // std::cout << "The last element is: " << lastElement << std::endl;
         for(int i = 0; i<argc; i++) {
             std::vector<std::string> filePATHresult=splitStringBySpace((argv[i] ? argv[i] : "NULL"));
+            
             if (!filePATHresult.empty()) {
                 
-                    std::cout <<filePATHresult.back()<< "\\" << lastElement << "\n";
+                    std::cout <<filePATHresult.back()<< "\\" << lastElement<< "\n";
                 
             }
 
         }
-        // std::cout << "\n";
     }
+
+
+        
+    }
+    std::cout << "\n";
     return 0;
 }
 
