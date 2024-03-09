@@ -42,7 +42,7 @@ static int printDataCallback(void *data, int argc, char **argv, char **azColName
     std::vector<std::string> results = splitStringBySpace(lineValue);
 
 
-    if (!results.empty()) { // 条件检查以确保vector不为空
+    if (!results.empty()) { 
 
 
     
@@ -82,20 +82,20 @@ int main(int argc, char* argv[]) {
     char *zErrMsg = 0;
     int rc;
 
-    // 从命令行参数获取搜索字符串
-    std::string searchTerm = "demo";  // 默认值
+    
+    std::string searchTerm = "demo";  
     if (argc > 1) {
-        searchTerm = argv[1];  // 从命令行参数获取搜索字符串
+        searchTerm = argv[1];  
     }
 
-    // 打开数据库
+    
     rc = sqlite3_open("test.db", &db);
     if(rc) {
         std::cerr << "Can't open database: " << sqlite3_errmsg(db) << "\n";
         return(0);
     } 
 
-    // 获得含有搜索字符串的行的rowid
+    
     std::string sql = "SELECT rowid, Line FROM Lines WHERE Line LIKE '%" + searchTerm + "%';";
     std::vector<std::pair<int, std::string>> rows;
     rc = sqlite3_exec(db, sql.c_str(), getRowidCallback, &rows, &zErrMsg);
@@ -105,7 +105,7 @@ int main(int argc, char* argv[]) {
         sqlite3_free(zErrMsg);
     } 
 
-    // 根据每个rowid进行查询
+    
     for(const auto& row : rows) {
         int rowid = row.first;
         std::string lineValue = row.second;
@@ -118,7 +118,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    // 关闭数据库
+    
     sqlite3_close(db);
 
     return 0;
