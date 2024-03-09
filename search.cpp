@@ -73,7 +73,7 @@ static int printDataCallback(void *data, int argc, char **argv, char **azColName
 
         
     }
-    std::cout << "\n";
+    // std::cout << "\n";
     return 0;
 }
 

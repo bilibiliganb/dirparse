@@ -7,6 +7,6 @@ if [ ! -f ./test.db ]; then
     ./bar
     ./searchall $1
 else
-    echo "search $1"
+    # echo "search $1"
     ./searchall $1
 fi
