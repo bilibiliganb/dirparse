@@ -1,0 +1,59 @@
+
+
+C:\Windows\system32>dir /s
+ Volume in drive C is Windows
+ Volume Serial Number is 1234-5678
+
+ Directory of C:\Windows\system32
+
+2023/08/14  17:00    <DIR>          .
+2023/08/14  17:00    <DIR>          ..
+2023/07/10  09:34    <DIR>          drivers
+2023/08/14  16:55    <DIR>          etc
+2023/08/14  16:56    <DIR>          logs
+2023/08/14  16:59    <DIR>          temp
+2023/08/14  16:57    <DIR>          tools
+               0 File(s)              0 bytes
+
+ Directory of C:\Windows\system32\drivers
+
+2023/07/10  09:34    <DIR>          .
+2023/07/10  09:34    <DIR>          ..
+2023/06/20  14:22           100,352 driver1.sys
+2023/06/20  14:23           150,528 driver2.sys
+               2 File(s)        250,880 bytes
+
+ Directory of C:\Windows\system32\etc
+
+2023/08/14  16:55    <DIR>          .
+2023/08/14  16:55    <DIR>          ..
+2023/08/14  16:56               1,024 hosts
+               1 File(s)          1,024 bytes
+
+ Directory of C:\Windows\system32\logs
+
+2023/08/14  16:56    <DIR>          .
+2023/08/14  16:56    <DIR>          ..
+2023/08/14  16:57           500,000 log1.txt
+2023/08/14  16:58           750,000 log2.txt
+               2 File(s)      1,250,000 bytes
+
+ Directory of C:\Windows\system32\temp
+
+2023/08/14  16:59    <DIR>          .
+2023/08/14  16:59    <DIR>          ..
+2023/08/14  17:00         1,000,000 temp1.tmp
+2023/08/14  17:01         1,500,000 temp2.tmp
+               2 File(s)      2,500,000 bytes
+
+ Directory of C:\Windows\system32\tools
+
+2023/08/14  16:57    <DIR>          .
+2023/08/14  16:57    <DIR>          ..
+2023/08/14  16:58           200,000 tool1.exe
+2023/08/14  16:59           300,000 tool2.exe
+               2 File(s)        500,000 bytes
+
+     Total Files Listed:
+              9 File(s)      4,502,784 bytes
+             20 Dir(s)  100,000,000,000 bytes free
