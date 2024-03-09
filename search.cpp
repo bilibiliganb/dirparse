@@ -16,6 +16,17 @@ std::vector<std::string> splitStringBySpace(const std::string& input) {
     return results;
 }
 
+std::string removeSubstring(std::string original, const std::string& toRemove) {
+    std::size_t pos = original.find(toRemove);
+    
+    if (pos != std::string::npos) {
+        original.erase(pos, toRemove.length());
+    }
+    
+    return original;
+}
+
+
 
 
 static int getRowidCallback(void *data, int argc, char **argv, char **azColName) {
@@ -47,11 +58,12 @@ static int printDataCallback(void *data, int argc, char **argv, char **azColName
 
             // std::cout << "The last element is: " << lastElement << std::endl;
         for(int i = 0; i<argc; i++) {
-            std::vector<std::string> filePATHresult=splitStringBySpace((argv[i] ? argv[i] : "NULL"));
-            
-            if (!filePATHresult.empty()) {
+
+            // std::vector<std::string> filePATHresult=splitStringBySpace((argv[i] ? argv[i] : "NULL"));
+            std::string FilePath =  removeSubstring((argv[i] ? argv[i] : "NULL")," Directory of");
+            if (FilePath!="") {
                 
-                    std::cout <<filePATHresult.back()<< "\\" << lastElement<< "\n";
+                    std::cout <<FilePath<< "\\" << lastElement<< "\n";
                 
             }
 
